@@ -4,4 +4,10 @@
   + X translate
   + Y translate
   + Z translate
- + Change Rotate to support all axis and a origin point (default {0, 0, 0})
+  + X rotation
+  + Y rotation
+  + Z rotation
+ + Add a function to rotate around origin point
+  + translate to xO yO zO
+  + rotate xA yA zA
+  + translate again to previous position
