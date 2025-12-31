@@ -1,5 +1,7 @@
 # TODO
- + Read objects from .obj
+ + Read objects from `.obj`
+  + translate `.obj` files to json
+  + read data from this json
 
  + Sliders to change :
   + X translate
@@ -18,4 +20,8 @@
 
  + Support different ratios
   + process screen ratio
-  + apply modifiers in coordsToScreen()
+  + apply modifiers in `coordsToScreen()`
+
+ + Enable / Disable :
+  + dots
+  + lines
