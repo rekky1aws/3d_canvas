@@ -104,7 +104,7 @@ function rotateZ (dot, angle = 0) {
   }
 }
 
-function rotate (dot, angles = {x: 0, y: 0, z:0}) {
+function rotate (dot, angles = {x: 0, y: 0, z:0}) { // Rotates a point about 0,0,0
   let resDot = {}; 
 
   resDot = { // rotating around y axis
@@ -173,7 +173,7 @@ function polyRotateZ (poly, angle = 0) {
   };
 }
 
-function polyRotate (poly, angles = {x: 0, y: 0, z: 0}) {
+function polyRotate (poly, angles = {x: 0, y: 0, z: 0}) { // Rotate polypoint about 0,0,0
   let dots = [];
   poly.dots.forEach(d => {
     dots.push(rotate(d, angles));
@@ -185,7 +185,7 @@ function polyRotate (poly, angles = {x: 0, y: 0, z: 0}) {
   };
 }
 
-function polyTranslate (poly, delta = {x: 0, y: 0, z: 0}) {
+function polyTranslate (poly, delta = {x: 0, y: 0, z: 0}) { // Translates polypoint
   let dots = [];
   poly.dots.forEach(d => {
     dots.push(translate(d, delta));
