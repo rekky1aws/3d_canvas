@@ -80,30 +80,6 @@ function coordsToScreen (dot) { // Takes normalized coordinates (-1 => 1) and tr
   }
 }
 
-function rotateY (dot, angle = 0) {
-  return {
-    ...dot,
-    x: (dot.x*Math.cos(angle))-(dot.z*Math.sin(angle)),
-    z: (dot.x*Math.sin(angle))+(dot.z*Math.cos(angle))
-  }
-}
-
-function rotateX (dot, angle = 0) {
-  return {
-    ...dot,
-    y: (dot.y*Math.cos(angle))-(dot.z*Math.sin(angle)),
-    z: (dot.y*Math.sin(angle))+(dot.z*Math.cos(angle))
-  }
-}
-
-function rotateZ (dot, angle = 0) {
-  return {
-    ...dot,
-    x: (dot.y*Math.sin(angle))+(dot.x*Math.cos(angle)),
-    y: (dot.y*Math.cos(angle))-(dot.x*Math.sin(angle)),
-  }
-}
-
 function rotate (dot, angles = {x: 0, y: 0, z:0}) { // Rotates a point about 0,0,0
   let resDot = {}; 
 
@@ -137,42 +113,6 @@ function translate (dot, delta = {x: 0, y: 0, z: 0}) {
 }
 
 // Maths Poly
-function polyRotateY (poly, angle = 0) {
-  let dots = [];
-  poly.dots.forEach(d => {
-    dots.push(rotateY(d, angle));
-  });
-
-  return {
-    ...poly,
-    dots
-  };
-}
-
-function polyRotateX (poly, angle = 0) {
-  let dots = [];
-  poly.dots.forEach(d => {
-    dots.push(rotateX(d, angle));
-  });
-
-  return {
-    ...poly,
-    dots
-  };
-}
-
-function polyRotateZ (poly, angle = 0) {
-  let dots = [];
-  poly.dots.forEach(d => {
-    dots.push(rotateZ(d, angle));
-  });
-
-  return {
-    ...poly,
-    dots
-  };
-}
-
 function polyRotate (poly, angles = {x: 0, y: 0, z: 0}) { // Rotate polypoint about 0,0,0
   let dots = [];
   poly.dots.forEach(d => {
