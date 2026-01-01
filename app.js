@@ -22,6 +22,18 @@ canvas.height = 600;
 
 const ctx = canvas.getContext("2d");
 
+// Canvas size
+function squareCanvas () {
+  let size = Math.min(window.innerWidth, window.innerHeight);
+  if (size % 100 == 0) {
+    size -= 10;
+  }
+  size = size - size%100;
+
+  canvas.width = size - 10;
+  canvas.height = size - 10;
+}
+
 // Draw
 function clearCanvas() {
   ctx.fillStyle = BG;
@@ -142,17 +154,19 @@ function polyTranslate (poly, delta = {x: 0, y: 0, z: 0}) { // Translates polypo
 function frame () {
   clearCanvas();
   dzGlobal += 1/FPS;
-  dAngleGlobal += 1/FPS;
+  dAngleGlobal = (dAngleGlobal + (1/FPS)) % (Math.PI *2);
+
   // drawPolyLines(polyTranslate(polyRotateY(cube3, dAngleGlobal), 0, 0, 1.5));
   // drawPolyLines(polyTranslate(polyRotateX(cube3, dAngleGlobal), 0, 0, 1.5));
   // drawPolyLines(polyTranslate(polyRotateZ(cube3, dAngleGlobal), 0, 0, 1.5));
 
   // drawPolyLines(polyTranslate(polyRotateZ(polyRotateX(polyRotateY(cube3, dAngleGlobal), dAngleGlobal), dAngleGlobal), 0, 0, 1.5));
 
-  drawPolyLines(polyTranslate(polyRotate(cube3, {x: dAngleGlobal, y: dAngleGlobal, z:dAngleGlobal}), {x: 0, y: 0, z: 1.25}));
+  drawPolyLines(polyTranslate(polyRotate(cube3, {x: dAngleGlobal, y: dAngleGlobal, z:dAngleGlobal}), {x: 0, y: 0, z: 1.25 }));
 }
 
 
 // MAIN
+squareCanvas();
 // drawPolyLines(polyTranslate(cube3, 0, 0, 0.4));
 setInterval(frame, 1000/FPS);
