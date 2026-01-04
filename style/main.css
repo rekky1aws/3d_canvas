@@ -1,0 +1,18 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  widows: 100vw;
+}
+
+#canvas {
+  background-color: #1D1D1D;
+  border: 2px dotted white;
+}
