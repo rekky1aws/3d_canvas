@@ -3,7 +3,7 @@
   padding: 0;
 }
 
-body {
+#canvas-container {
   background-color: black;
   display: flex;
   justify-content: center;
@@ -15,4 +15,28 @@ body {
 #canvas {
   background-color: #1D1D1D;
   border: 2px dotted white;
+}
+
+#ctrl-btn {
+  position: fixed;
+  top: 0;
+  right: 0;
+}
+
+#ctrl-menu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  background-color: #2C2C2C;
+  color: #FFFFFF;
+  transition: ease-in-out 0.2s;
+  opacity: 0;
+  display: none;
+  flex-direction: column;
+  user-select: none;
+}
+
+.visible-menu {
+  opacity: 1 !important;
+  display: flex !important;
 }

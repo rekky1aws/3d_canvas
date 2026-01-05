@@ -7,27 +7,35 @@
   <title></title>
   <script src="./script/cube.js" defer></script>
   <script src="./script/app.js" defer></script>
+  <script src="./script/menu.js" defer></script>
   <link rel="stylesheet" type="text/css" href="./style/main.css">
 </head>
 
 <body>
-  <canvas id="canvas"></canvas>
-  <div id="controls">
-    <!--
-    <input type="checkbox" name="animate">
-    menu  with sliders and checkboxes to change :
-      + Animation 0/1
-      + Display Lines 0/1
-      + Display Dots 0/1
-      + X Rotation angle 0 -> 1
-      + Y Rotation angle 0 -> 1
-      + Z Rotation angle 0 -> 1
-      + X Translation 0 -> 1
-      + Y Translation 0 -> 1
-      + Z Translation 0 -> 1
+  <div id="canvas-container">
+    <canvas id="canvas"></canvas>
+  </div>
+  <button id="ctrl-btn">Show Menu</button>
+  <div id="ctrl-menu">
+    <div class="menu-title">Control Menu</div>
+    <div>
+      <input type="checkbox" name="animate">
+      
+      <!--
+      menu  with sliders and checkboxes to change :
+        + Animation 0/1
+        + Display Lines 0/1
+        + Display Dots 0/1
+        + X Rotation angle 0 -> 1
+        + Y Rotation angle 0 -> 1
+        + Z Rotation angle 0 -> 1
+        + X Translation 0 -> 1
+        + Y Translation 0 -> 1
+        + Z Translation 0 -> 1
 
-      + later : import new .obj file
-    -->
+        + later : import new .obj file
+      -->
+    </div>
   </div>
 </body>
 
