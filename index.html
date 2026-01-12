@@ -19,13 +19,34 @@
   <div id="ctrl-menu">
     <div class="menu-title">Control Menu</div>
     <div>
-      <input type="checkbox" name="animate">
-      
+      <!-- Animation Toggle -->
+      <div class="simple-input-container">
+        <span>Animation</span>
+        <label class="toggle" for="animate-chbx">
+          <div class="toggle-circle"></div>
+          <input class="toggle-chbx" type="checkbox" name="animate" id="animate-chbx">
+        </label>
+      </div>
+
+      <!-- Draw Lines Toggle -->
+      <div class="simple-input-container">
+        <span>Draw Lines</span>
+        <label class="toggle" for="draw-lines-chbx">
+          <div class="toggle-circle"></div>
+          <input class="toggle-chbx" type="checkbox" name="draw-lines" id="draw-lines-chbx">
+        </label>
+      </div>
+
+      <div class="simple-input-container">
+        <span>Draw Corners</span>
+        <label class="toggle" for="draw-corners-chbx">
+          <div class="toggle-circle"></div>
+          <input class="toggle-chbx" type="checkbox" name="draw-corners" id="draw-corners-chbx">
+        </label>
+      </div>
+
       <!--
       menu  with sliders and checkboxes to change :
-        + Animation 0/1
-        + Display Lines 0/1
-        + Display Dots 0/1
         + X Rotation angle 0 -> 1
         + Y Rotation angle 0 -> 1
         + Z Rotation angle 0 -> 1
