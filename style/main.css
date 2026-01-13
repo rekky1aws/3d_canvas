@@ -40,3 +40,36 @@
   opacity: 1 !important;
   display: flex !important;
 }
+
+.simple-input-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.toggle {
+  display: flex;
+  justify-content: flex-start;
+  height: 1rem;
+  width: 1.5rem;
+  background-color: gray;
+  border-radius: 0.5rem;
+  padding: 0.1rem;
+}
+
+.toggle-circle {
+  height: 1rem;
+  width: 1rem;
+  background-color: white;
+  border-radius: 50%;
+}
+
+.toggle:has(.toggle-chbx:checked) {
+  background-color: lime;
+  justify-content: flex-end;
+}
+
+.toggle-chbx {
+  display: none;
+}
