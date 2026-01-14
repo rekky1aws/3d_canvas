@@ -18,7 +18,7 @@
   <button id="ctrl-btn">Show Menu</button>
   <div id="ctrl-menu">
     <div class="menu-title">Control Menu</div>
-    <div>
+    <div class="menu-items">
       <!-- Animation Toggle -->
       <div class="simple-input-container">
         <span>Animation</span>
@@ -45,15 +45,45 @@
         </label>
       </div>
 
+      <div class="multiple-input-container">
+        <span>Rotations</span>
+        <div>
+          <label>X</label>
+          <input type="range" name="x-rotation">
+        </div>
+
+        <div>
+          <label>Y</label>
+          <input type="range" name="y-rotation">
+        </div>
+
+        <div>
+          <label>Z</label>
+          <input type="range" name="z-rotation">
+        </div>
+      </div>
+
+
+      <div class="multiple-input-container">
+        <span>Translations</span>
+        <div>
+          <label>X</label>
+          <input type="range" name="x-translation">
+        </div>
+
+        <div>
+          <label>Y</label>
+          <input type="range" name="y-translation">
+        </div>
+
+        <div>
+          <label>Z</label>
+          <input type="range" name="z-translation">
+        </div>
+      </div>
+
       <!--
       menu  with sliders and checkboxes to change :
-        + X Rotation angle 0 -> 1
-        + Y Rotation angle 0 -> 1
-        + Z Rotation angle 0 -> 1
-        + X Translation 0 -> 1
-        + Y Translation 0 -> 1
-        + Z Translation 0 -> 1
-
         + later : import new .obj file
       -->
     </div>
