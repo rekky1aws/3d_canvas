@@ -27,6 +27,7 @@
   position: fixed;
   top: 0;
   right: 0;
+  padding: 1rem;
   background-color: #2C2C2C;
   color: #FFFFFF;
   transition: ease-in-out 0.2s;
@@ -41,9 +42,25 @@
   display: flex !important;
 }
 
+.menu-title {
+  text-align: center;
+  font-weight: bold;
+  margin: 0 0 0.5rem 0;
+}
+
+.menu-title:hover {
+  background-color: black;
+}
+
+.menu-items {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
 .simple-input-container {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   gap: 0.5rem;
 }
