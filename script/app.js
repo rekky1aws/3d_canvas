@@ -8,6 +8,9 @@ z = 0 = viewer's eyese
 z = 1 = screen
 z > 1 = further than screen
 */
+const animToggle = document.querySelector('#animate-chbx');
+const linesToggle = document.querySelector('#draw-lines-chbx');
+const cornerToggle = document.querySelector('#draw-corners-chbx');
 
 const BG = "#1D1D1D";
 const FG = "#66FF66";
@@ -153,8 +156,11 @@ function polyTranslate (poly, delta = {x: 0, y: 0, z: 0}) { // Translates polypo
 // Animation
 function frame () {
   clearCanvas();
-  dzGlobal += 1/FPS;
-  dAngleGlobal = (dAngleGlobal + (1/FPS)) % (Math.PI *2);
+
+  if (animToggle.checked) {
+    dzGlobal += 1/FPS;
+    dAngleGlobal = (dAngleGlobal + (1/FPS)) % (Math.PI *2);
+  }
 
   // drawPolyLines(polyTranslate(polyRotateY(cube3, dAngleGlobal), 0, 0, 1.5));
   // drawPolyLines(polyTranslate(polyRotateX(cube3, dAngleGlobal), 0, 0, 1.5));
@@ -162,7 +168,13 @@ function frame () {
 
   // drawPolyLines(polyTranslate(polyRotateZ(polyRotateX(polyRotateY(cube3, dAngleGlobal), dAngleGlobal), dAngleGlobal), 0, 0, 1.5));
 
-  drawPolyLines(polyTranslate(polyRotate(cube3, {x: dAngleGlobal, y: dAngleGlobal, z:dAngleGlobal}), {x: 0, y: 0, z: 1.25 }));
+  if (linesToggle.checked) {
+    drawPolyLines(polyTranslate(polyRotate(cube3, {x: dAngleGlobal, y: dAngleGlobal, z:dAngleGlobal}), {x: 0, y: 0, z: 1.25 }));
+  }
+
+  if (cornerToggle.checked) {
+    drawPolyDots(polyTranslate(polyRotate(cube3, {x: dAngleGlobal, y: dAngleGlobal, z:dAngleGlobal}), {x: 0, y: 0, z: 1.25 }));
+  }
 }
 
 
